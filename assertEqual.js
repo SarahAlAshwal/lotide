@@ -1,21 +1,21 @@
 const assertEqual = function(actual, expected) {
-
-  let quotations = "\"";
+  let passEmoji = String.fromCodePoint(0x1F44C);
+  let failEmoji = String.fromCodePoint(0x1F4A5);
 
   if (typeof actual === "string") {
 
-    actual = quotations + actual + quotations;
+    actual = `"${actual}"`;
     
   }
 
   if (typeof expected === 'string') {
-    expected = quotations + expected + quotations;
+    expected = `"${expected}"`;
   }
 
   if (actual === expected) {
-    console.log(String.fromCodePoint(0x1F44C) + " Assertion passed: " + actual + " == " + expected);
+    console.log(`${passEmoji} Assertion passed: ${actual} == ${expected}`);
   } else {
-    console.log(String.fromCodePoint(0x1F4A5) + " Assertion failed: " + actual + " != " + expected);
+    console.log(`${failEmoji} Assertion failed: ${actual} != ${expected}`);
   }
 
 };
