@@ -24,15 +24,14 @@ const assertArraysEqual = function(firstArray, secondArray) {
   }
 };
 
-const flatten = function(array){
-  let output =[];
-  for (let element of array){
+const flatten = function(array) {
+  let output = [];
+  for (let element of array) {
     if (Array.isArray(element)) {
       for (let i = 0; i < element.length; i++) {
         output.push(element[i]);
       }
-    }
-    else {
+    } else {
       output.push(element);
     }
   }
