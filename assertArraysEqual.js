@@ -1,17 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  let n1 = arr1.length;
-  let n2 = arr2.length;
-  if (n1 !== n2) {
-    return false;
-  } else {
-    for (let i = 0; i < n1; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const eqArrays = require ('./eqArrays');
 
 const assertArraysEqual = function(firstArray, secondArray) {
   let passEmoji = String.fromCodePoint(0x1F44C);
@@ -25,8 +12,5 @@ const assertArraysEqual = function(firstArray, secondArray) {
 
 };
 
-assertArraysEqual([2,1,3],[2,1,3]);
-assertArraysEqual(['hello', 'hi'],['helo','hi']);
-assertArraysEqual([1,2,3],[1,2]);
-assertArraysEqual(['Lighthouse Labs'],['Lighthouse Labs']);
-assertArraysEqual(["h","a"],["H","a"]);
+module.exports = assertArraysEqual;
+
