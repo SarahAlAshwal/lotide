@@ -1,4 +1,3 @@
-const assertEqual = require ('./assertEqual');
 
 // This function consider small letters equal to capital letter if we want to consider them different entities
 // We can delete toLowerCase() function

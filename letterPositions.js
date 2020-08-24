@@ -1,6 +1,3 @@
-const eqArrays = require("./eqArrays");
-const assertArraysEqual = require('./assertArraysEqual');
-
 const letterPositions = function(sentence) {
   let letterPosition = {};
   sentence = sentence.toLowerCase();

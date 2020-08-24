@@ -1,4 +1,3 @@
-const assertEqual = require ('./assertEqual');
 
 const findKeyByValue = function(obj, value) {
   for (const prop in obj) {
