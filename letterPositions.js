@@ -1,29 +1,5 @@
-const eqArrays = function(arr1, arr2) {
-  let n1 = arr1.length;
-  let n2 = arr2.length;
-  if (n1 !== n2) {
-    return false;
-  } else {
-    for (let i = 0; i < n1; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-
-const assertArraysEqual = function(firstArray, secondArray) {
-  let passEmoji = String.fromCodePoint(0x1F44C);
-  let failEmoji = String.fromCodePoint(0x1F4A5);
-
-  if (eqArrays(firstArray, secondArray)) {
-    console.log(`${passEmoji} Assertion passed: [${firstArray}] == [${secondArray}]`);
-  } else {
-    console.log(`${failEmoji} Assertion failed: [${firstArray}] != [${secondArray}]`);
-  }
-
-};
+const eqArrays = require("./eqArrays");
+const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPositions = function(sentence) {
   let letterPosition = {};
@@ -40,7 +16,5 @@ const letterPositions = function(sentence) {
   return letterPosition;
 };
 
-console.log(letterPositions("Sarah"));
-console.log(letterPositions("lighthouse in the house"));
-const test = letterPositions("my lotide project");
-assertArraysEqual(test["o"],[4,12]);
+module.exports = letterPositions;
+
